@@ -26,8 +26,8 @@ const selectedCategory = ref("");
           >
           <NuxtLink
             to="/product/create"
-            class="bg-green-500 text-white flex justify-centeritems-center px-3 rounded-lg"
-            >Create Products</NuxtLink
+            class="bg-green-500 text-white flex justify-center items-center px-3 rounded-lg"
+            >Create Collections</NuxtLink
           >
           <Dropdown @selected-category="selectedCategory = $event" />
         </div>

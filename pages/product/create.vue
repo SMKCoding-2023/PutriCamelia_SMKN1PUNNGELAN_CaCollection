@@ -36,14 +36,6 @@ const formCreateProduct = [
     required: true,
   },
   {
-    name: "price",
-    label: "Price",
-    type: "number",
-    value: "",
-    placeholder: "$30",
-    required: true,
-  },
-  {
     name: "image",
     label: "Image",
     type: "file",
@@ -112,7 +104,7 @@ const uploadFile = async (formFile: any) => {
 <template>
   <section class="flex justify-center py-10">
     <div class="w-[500px]">
-      <h1 class="text-2xl mb-7 font-medium">Create Products</h1>
+      <h1 class="text-2xl mb-7 font-medium">Create Collection</h1>
       <div
         v-if="isShowAlert"
         :class="`p-4 mb-4 text-sm rounded-lg ${

@@ -1,47 +1,66 @@
 <template>
   <div class="home">
-    <div class="header"></div>
-    <div class="content"></div>
+    <div class="hero">
+      <h1 class="hero-title">WELCOME {{ storeName }}</h1>
+      <p class="hero-description">KOLEKSI KU</p>
+      <NuxtLink to="/product" class="text-base">
+        <button class="hero-button">Lihat Koleksi</button>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  data() {
+    return {
+      storeName: "TO MY COLLECTION"
+    };
+  }
 };
 </script>
 
 <style scoped>
 .home {
-  text-align: center;
-  padding: 20px;
-  background-image: url("/images/background.jpg");
-  background-size: cover;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/images/background.jpeg') center/cover no-repeat;
 }
 
-.header h1 {
+.hero {
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
   font-size: 2.5em;
   margin-bottom: 10px;
+  color: #007BFF;
 }
 
-.header p {
+.hero-description {
   font-size: 1.5em;
-  color: #777;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.content h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-}
-
-.content ul {
-  list-style-type: disc;
+.hero-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
   font-size: 1.2em;
-  text-align: left;
-  padding-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.content li {
-  margin: 10px 0;
+
+.hero-button:hover {
+  background-color: #0056b3;
 }
 </style>

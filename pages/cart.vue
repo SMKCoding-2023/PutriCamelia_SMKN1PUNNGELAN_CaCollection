@@ -56,7 +56,7 @@ const removeCart = (id: number) => {
                 class="flex gap-4 items-center"
               >
                 <span class="text-limit limit-1 text-sm">{{ item.name }}</span>
-                <span class="text-sm font-semibold">${{ item.price }}</span>
+                
               </div>
             </div>
             <div v-else>
